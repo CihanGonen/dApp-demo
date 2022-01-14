@@ -1,0 +1,43 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+button {
+  border: none;
+  padding: 1rem 0.2rem;
+  outline: none;
+  background-color: chartreuse;
+  color: black;
+  border: 1px solid chartreuse;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  width: 200px;
+}
+button:hover {
+  color: chartreuse;
+  border: 1px solid chartreuse;
+  background-color: black;
+}
+.buy-token-wrapper {
+  font-size: 18px;
+  text-align: center;
+}
+span {
+  font-weight: bold;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+input {
+  width: 350px;
+  padding: 0.5rem;
+}
