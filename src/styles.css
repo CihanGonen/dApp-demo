@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  padding-top: 10%;
 }
 button {
   border: none;
@@ -30,7 +31,8 @@ span {
 form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  align-items: center;
+  gap: 1.5rem;
 }
 label {
   display: flex;

@@ -23,6 +23,7 @@ export default function ProfilePage() {
       console.error(err);
       setPersonalSign(`Error: ${err.message}`);
     }
+    setProfileName("");
   };
 
   return (
@@ -44,7 +45,7 @@ export default function ProfilePage() {
         </label>
         <button type="submit">Save</button>
       </form>
-      <p style={{ width: "350px" }}>{personalSign}</p>
+      <p>{personalSign}</p>
     </div>
   );
 }

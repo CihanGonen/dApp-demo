@@ -6,30 +6,13 @@ import BuyTokenPage from "./BuyTokenPage";
 import ProfilePage from "./ProfilePage";
 
 const App = () => {
-  const [walletAdress, setWalletAdress] = useState("");
-  const [walletBalance, setWalletBalance] = useState("");
-
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route
-            path="/"
-            element={
-              <Home
-                setWalletAdress={setWalletAdress}
-                setWalletBalance={setWalletBalance}
-              />
-            }
-          />
-          <Route
-            path="/:walletAdress"
-            element={<BuyTokenPage walletBalance={walletBalance} />}
-          />
-          <Route
-            path="/profile/:walletAdress"
-            element={<ProfilePage walletAdress={walletAdress} />}
-          />
+          <Route path="/" element={<Home />} />
+          <Route path="/:walletAdress" element={<BuyTokenPage />} />
+          <Route path="/profile/:walletAdress" element={<ProfilePage />} />
         </Routes>
       </BrowserRouter>
     </div>

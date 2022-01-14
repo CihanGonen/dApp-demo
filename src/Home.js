@@ -1,7 +1,7 @@
 import Web3 from "web3";
 import { useNavigate } from "react-router-dom";
 
-export default function Home({ setWalletAdress, setWalletBalance }) {
+export default function Home() {
   let navigate = useNavigate();
 
   const handleLogin = async () => {
@@ -10,10 +10,7 @@ export default function Home({ setWalletAdress, setWalletBalance }) {
     try {
       await window.ethereum.enable();
       const accounts = await web3.eth.getAccounts();
-      console.log(accounts[0]);
-      setWalletAdress(accounts[0]);
       const balance = await web3.eth.getBalance(accounts[0]);
-      setWalletBalance(balance);
       if (balance !== "0") {
         navigate(`/${accounts[0]}`);
       } else {
